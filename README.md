@@ -12,12 +12,12 @@ Need to design the architecture of the voice recording application. The purpose 
 # Requirements
 Clients (Mobile or Website) should be able to upload the audio and asynchronously get audio after grammar corrections from the backend.
 
-# Architecture Diagram
+# <a name="fig">Architecture Diagram</a>
 Front end app will use the rest API’s to upload the audio file to the server. Upload api is exposed to the client and client is connected with notifications service via sockets. Client will get the updated audio file via CDN. 
 # ![Aspose Words f861679f-1025-4199-850e-0748a6cef24b 001](https://user-images.githubusercontent.com/32847311/201471314-945cd4b3-f508-4f47-b0d4-04682353b773.jpeg)
 Fig: Architecture Diagram
 ## Description: 
-There are three micro services in the [Fig](#kix.13bt5hwp1p0z) and one main web server.
+There are three micro services in the [Fig](#fig) and one main web server.
 
 1. Auth Service.
 1. Audio Service. 
@@ -48,7 +48,7 @@ GET   /token/verify
 ### **Context**: 
 It is responsible to take an audio(mp3) file from the server and
 - Upload it to S3 bucket. 
-- Server will inform the audio service [Fig](#kix.13bt5hwp1p0z) to start the processing on the audio file web server will share the file S3 key and token with the audio service . 
+- Server will inform the audio service [Fig](#fig) to start the processing on the audio file web server will share the file S3 key and token with the audio service . 
 ###
 ### API’s:
 \```
